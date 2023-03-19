@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB28002729C6EB0D00C45D49 /* OrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB28002629C6EB0D00C45D49 /* OrdersTableViewController.swift */; };
+		EB28002929C6F11C00C45D49 /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB28002829C6F11C00C45D49 /* AddOrderViewController.swift */; };
 		EB2CC9C129C6E41400F9F896 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2CC9C029C6E41400F9F896 /* AppDelegate.swift */; };
 		EB2CC9C329C6E41400F9F896 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2CC9C229C6E41400F9F896 /* SceneDelegate.swift */; };
-		EB2CC9C529C6E41400F9F896 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2CC9C429C6E41400F9F896 /* ViewController.swift */; };
 		EB2CC9C829C6E41400F9F896 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2CC9C629C6E41400F9F896 /* Main.storyboard */; };
 		EB2CC9CA29C6E41600F9F896 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB2CC9C929C6E41600F9F896 /* Assets.xcassets */; };
 		EB2CC9CD29C6E41600F9F896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2CC9CB29C6E41600F9F896 /* LaunchScreen.storyboard */; };
@@ -36,10 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB28002629C6EB0D00C45D49 /* OrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewController.swift; sourceTree = "<group>"; };
+		EB28002829C6F11C00C45D49 /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
 		EB2CC9BD29C6E41400F9F896 /* CoffeOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2CC9C029C6E41400F9F896 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB2CC9C229C6E41400F9F896 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EB2CC9C429C6E41400F9F896 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB2CC9C729C6E41400F9F896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB2CC9C929C6E41600F9F896 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB2CC9CC29C6E41600F9F896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB28002529C6E8E300C45D49 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB28002629C6EB0D00C45D49 /* OrdersTableViewController.swift */,
+				EB28002829C6F11C00C45D49 /* AddOrderViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		EB2CC9B429C6E41400F9F896 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +110,9 @@
 		EB2CC9BF29C6E41400F9F896 /* CoffeOrder */ = {
 			isa = PBXGroup;
 			children = (
+				EB28002529C6E8E300C45D49 /* Controller */,
 				EB2CC9C029C6E41400F9F896 /* AppDelegate.swift */,
 				EB2CC9C229C6E41400F9F896 /* SceneDelegate.swift */,
-				EB2CC9C429C6E41400F9F896 /* ViewController.swift */,
 				EB2CC9C629C6E41400F9F896 /* Main.storyboard */,
 				EB2CC9C929C6E41600F9F896 /* Assets.xcassets */,
 				EB2CC9CB29C6E41600F9F896 /* LaunchScreen.storyboard */,
@@ -258,9 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB2CC9C529C6E41400F9F896 /* ViewController.swift in Sources */,
 				EB2CC9C129C6E41400F9F896 /* AppDelegate.swift in Sources */,
 				EB2CC9C329C6E41400F9F896 /* SceneDelegate.swift in Sources */,
+				EB28002729C6EB0D00C45D49 /* OrdersTableViewController.swift in Sources */,
+				EB28002929C6F11C00C45D49 /* AddOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
