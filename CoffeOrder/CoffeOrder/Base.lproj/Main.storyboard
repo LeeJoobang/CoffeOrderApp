@@ -81,14 +81,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Rpt-4j-t6A">
-                                <rect key="frame" x="93.666666666666686" y="485" width="206" height="66"/>
-                                <segments>
-                                    <segment title="Small"/>
-                                    <segment title="Medium"/>
-                                    <segment title="Large"/>
-                                </segments>
-                            </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WiN-yS-mUA">
                                 <rect key="frame" x="96.666666666666686" y="607" width="200" height="34"/>
                                 <constraints>
@@ -113,13 +105,10 @@
                         <constraints>
                             <constraint firstItem="hWd-q1-2OW" firstAttribute="leading" secondItem="g6v-tP-DsA" secondAttribute="leading" id="8do-ek-ubi"/>
                             <constraint firstItem="hWd-q1-2OW" firstAttribute="height" secondItem="ix4-0P-Iuq" secondAttribute="height" multiplier="0.5" id="9f7-0h-CtH"/>
-                            <constraint firstItem="Rpt-4j-t6A" firstAttribute="centerX" secondItem="ix4-0P-Iuq" secondAttribute="centerX" id="IRf-LR-WxQ"/>
                             <constraint firstItem="hWd-q1-2OW" firstAttribute="width" secondItem="ix4-0P-Iuq" secondAttribute="width" id="VWX-Zn-K7d"/>
                             <constraint firstItem="wDe-Lp-BGW" firstAttribute="centerX" secondItem="ix4-0P-Iuq" secondAttribute="centerX" id="arZ-tQ-j1U"/>
                             <constraint firstItem="WiN-yS-mUA" firstAttribute="centerX" secondItem="ix4-0P-Iuq" secondAttribute="centerX" id="dlc-5V-pvE"/>
                             <constraint firstItem="wDe-Lp-BGW" firstAttribute="top" secondItem="WiN-yS-mUA" secondAttribute="bottom" constant="8" symbolic="YES" id="f0J-LI-NyT"/>
-                            <constraint firstItem="WiN-yS-mUA" firstAttribute="top" secondItem="Rpt-4j-t6A" secondAttribute="bottom" constant="57" id="gfe-1a-Qsu"/>
-                            <constraint firstItem="Rpt-4j-t6A" firstAttribute="top" secondItem="hWd-q1-2OW" secondAttribute="bottom" constant="37.333333333333314" id="hhq-rS-iy8"/>
                             <constraint firstItem="hWd-q1-2OW" firstAttribute="top" secondItem="g6v-tP-DsA" secondAttribute="top" id="phC-NP-4q5"/>
                             <constraint firstItem="g6v-tP-DsA" firstAttribute="bottom" secondItem="wDe-Lp-BGW" secondAttribute="bottom" constant="100" id="pq7-lD-Ycx"/>
                         </constraints>
