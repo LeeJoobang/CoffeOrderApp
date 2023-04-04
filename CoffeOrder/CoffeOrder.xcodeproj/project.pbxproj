@@ -17,6 +17,7 @@
 		EB2CC9D829C6E41600F9F896 /* CoffeOrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2CC9D729C6E41600F9F896 /* CoffeOrderTests.swift */; };
 		EB2CC9E229C6E41600F9F896 /* CoffeOrderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2CC9E129C6E41600F9F896 /* CoffeOrderUITests.swift */; };
 		EB2CC9E429C6E41600F9F896 /* CoffeOrderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2CC9E329C6E41600F9F896 /* CoffeOrderUITestsLaunchTests.swift */; };
+		EBF7525729DBD63A0076EDCD /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7525629DBD63A0076EDCD /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		EB2CC9DD29C6E41600F9F896 /* CoffeOrderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeOrderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2CC9E129C6E41600F9F896 /* CoffeOrderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeOrderUITests.swift; sourceTree = "<group>"; };
 		EB2CC9E329C6E41600F9F896 /* CoffeOrderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeOrderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EBF7525629DBD63A0076EDCD /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		EB2CC9BF29C6E41400F9F896 /* CoffeOrder */ = {
 			isa = PBXGroup;
 			children = (
+				EBF7525529DBD6130076EDCD /* Servieces */,
 				EB28002529C6E8E300C45D49 /* Controller */,
 				EB2CC9C029C6E41400F9F896 /* AppDelegate.swift */,
 				EB2CC9C229C6E41400F9F896 /* SceneDelegate.swift */,
@@ -136,6 +139,14 @@
 				EB2CC9E329C6E41600F9F896 /* CoffeOrderUITestsLaunchTests.swift */,
 			);
 			path = CoffeOrderUITests;
+			sourceTree = "<group>";
+		};
+		EBF7525529DBD6130076EDCD /* Servieces */ = {
+			isa = PBXGroup;
+			children = (
+				EBF7525629DBD63A0076EDCD /* WebService.swift */,
+			);
+			path = Servieces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +283,7 @@
 				EB2CC9C129C6E41400F9F896 /* AppDelegate.swift in Sources */,
 				EB2CC9C329C6E41400F9F896 /* SceneDelegate.swift in Sources */,
 				EB28002729C6EB0D00C45D49 /* OrdersTableViewController.swift in Sources */,
+				EBF7525729DBD63A0076EDCD /* WebService.swift in Sources */,
 				EB28002929C6F11C00C45D49 /* AddOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
