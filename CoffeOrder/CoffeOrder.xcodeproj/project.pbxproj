@@ -19,6 +19,7 @@
 		EB2CC9E429C6E41600F9F896 /* CoffeOrderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2CC9E329C6E41600F9F896 /* CoffeOrderUITestsLaunchTests.swift */; };
 		EBF7525729DBD63A0076EDCD /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7525629DBD63A0076EDCD /* WebService.swift */; };
 		EBF7525A29DBDF2F0076EDCD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7525929DBDF2F0076EDCD /* Order.swift */; };
+		EBF7525D29DBF6800076EDCD /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7525C29DBF6800076EDCD /* OrderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		EB2CC9E329C6E41600F9F896 /* CoffeOrderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeOrderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EBF7525629DBD63A0076EDCD /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		EBF7525929DBDF2F0076EDCD /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		EBF7525C29DBF6800076EDCD /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		EB2CC9BF29C6E41400F9F896 /* CoffeOrder */ = {
 			isa = PBXGroup;
 			children = (
+				EBF7525B29DBF6570076EDCD /* ViewModels */,
 				EBF7525829DBDF0D0076EDCD /* Models */,
 				EBF7525529DBD6130076EDCD /* Servieces */,
 				EB28002529C6E8E300C45D49 /* Controller */,
@@ -158,6 +161,14 @@
 				EBF7525929DBDF2F0076EDCD /* Order.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EBF7525B29DBF6570076EDCD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EBF7525C29DBF6800076EDCD /* OrderViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +307,7 @@
 				EB2CC9C329C6E41400F9F896 /* SceneDelegate.swift in Sources */,
 				EB28002729C6EB0D00C45D49 /* OrdersTableViewController.swift in Sources */,
 				EBF7525729DBD63A0076EDCD /* WebService.swift in Sources */,
+				EBF7525D29DBF6800076EDCD /* OrderViewModel.swift in Sources */,
 				EB28002929C6F11C00C45D49 /* AddOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
