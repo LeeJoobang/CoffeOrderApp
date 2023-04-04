@@ -13,17 +13,16 @@ enum CoffeeSize: String, Codable {
     case large
 }
 
-enum Coffeetype: String, Codable {
+enum CoffeeType: String, Codable {
     case espresso
-    case americano
+    case cappuccino
     case latte
-    case tea
-} 
+}
 
 struct Order: Codable{
     let name: String
     let email: String
-    let type: Coffeetype
+    let type: CoffeeType
     let size: CoffeeSize
 }
 
