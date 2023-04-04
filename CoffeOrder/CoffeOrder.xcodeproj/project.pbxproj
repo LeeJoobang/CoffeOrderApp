@@ -18,6 +18,7 @@
 		EB2CC9E229C6E41600F9F896 /* CoffeOrderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2CC9E129C6E41600F9F896 /* CoffeOrderUITests.swift */; };
 		EB2CC9E429C6E41600F9F896 /* CoffeOrderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2CC9E329C6E41600F9F896 /* CoffeOrderUITestsLaunchTests.swift */; };
 		EBF7525729DBD63A0076EDCD /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7525629DBD63A0076EDCD /* WebService.swift */; };
+		EBF7525A29DBDF2F0076EDCD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7525929DBDF2F0076EDCD /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		EB2CC9E129C6E41600F9F896 /* CoffeOrderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeOrderUITests.swift; sourceTree = "<group>"; };
 		EB2CC9E329C6E41600F9F896 /* CoffeOrderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeOrderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EBF7525629DBD63A0076EDCD /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		EBF7525929DBDF2F0076EDCD /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		EB2CC9BF29C6E41400F9F896 /* CoffeOrder */ = {
 			isa = PBXGroup;
 			children = (
+				EBF7525829DBDF0D0076EDCD /* Models */,
 				EBF7525529DBD6130076EDCD /* Servieces */,
 				EB28002529C6E8E300C45D49 /* Controller */,
 				EB2CC9C029C6E41400F9F896 /* AppDelegate.swift */,
@@ -147,6 +150,14 @@
 				EBF7525629DBD63A0076EDCD /* WebService.swift */,
 			);
 			path = Servieces;
+			sourceTree = "<group>";
+		};
+		EBF7525829DBDF0D0076EDCD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EBF7525929DBDF2F0076EDCD /* Order.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBF7525A29DBDF2F0076EDCD /* Order.swift in Sources */,
 				EB2CC9C129C6E41400F9F896 /* AppDelegate.swift in Sources */,
 				EB2CC9C329C6E41400F9F896 /* SceneDelegate.swift in Sources */,
 				EB28002729C6EB0D00C45D49 /* OrdersTableViewController.swift in Sources */,
