@@ -9,6 +9,8 @@ import UIKit
 
 class OrdersTableViewController: UITableViewController{
     
+    var orderListViewModel = OrderListViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         populataOrder()
@@ -23,14 +25,34 @@ class OrdersTableViewController: UITableViewController{
         // Resource의 [Order]의 배열은 여러개의 주문을 담을 수 있기에 배열로 처리함.
         let resource = Resource<[Order]>(url: coffeeOrdersURL)
         let webService = WebService()
-        webService.load(resource: resource) { result in
+        webService.load(resource: resource) {[weak self] result in
             switch result{
             case .success(let orders):
-                print(orders)
+                self?.orderListViewModel.orderViewModel = orders.map(OrderViewModel.init)
+                self?.tableView.reloadData()
             case .failure(let errors):
                 print(errors)
             }
         }
     }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.orderListViewModel.orderViewModel.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let vm = self.orderListViewModel.orderViewModel(at: indexPath.row)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath)
+        cell.textLabel?.text = vm.type
+        cell.detailTextLabel?.text = vm.size
+        
+        return cell
+    }
+    
     
 }
