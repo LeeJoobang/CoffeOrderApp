@@ -20,6 +20,7 @@
 		EBF7525729DBD63A0076EDCD /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7525629DBD63A0076EDCD /* WebService.swift */; };
 		EBF7525A29DBDF2F0076EDCD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7525929DBDF2F0076EDCD /* Order.swift */; };
 		EBF7525D29DBF6800076EDCD /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7525C29DBF6800076EDCD /* OrderViewModel.swift */; };
+		EBF7525F29DBFE420076EDCD /* AddCoffeeOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7525E29DBFE420076EDCD /* AddCoffeeOrderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		EBF7525629DBD63A0076EDCD /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		EBF7525929DBDF2F0076EDCD /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		EBF7525C29DBF6800076EDCD /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		EBF7525E29DBFE420076EDCD /* AddCoffeeOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeOrderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				EBF7525C29DBF6800076EDCD /* OrderViewModel.swift */,
+				EBF7525E29DBFE420076EDCD /* AddCoffeeOrderViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBF7525F29DBFE420076EDCD /* AddCoffeeOrderViewModel.swift in Sources */,
 				EBF7525A29DBDF2F0076EDCD /* Order.swift in Sources */,
 				EB2CC9C129C6E41400F9F896 /* AppDelegate.swift in Sources */,
 				EB2CC9C329C6E41400F9F896 /* SceneDelegate.swift in Sources */,

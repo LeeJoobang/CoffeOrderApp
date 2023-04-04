@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum CoffeeSize: String, Codable {
+enum CoffeeSize: String, Codable, CaseIterable {
     case samll
     case medium
     case large
 }
 
-enum CoffeeType: String, Codable {
+enum CoffeeType: String, Codable, CaseIterable {
     case espresso
     case cappuccino
     case latte
