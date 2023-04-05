@@ -18,14 +18,15 @@ class OrdersTableViewController: UITableViewController{
     }
     
     private func populataOrder(){
-        guard let coffeeOrdersURL =  URL(string: "https://warp-wiry-rugby.glitch.me/orders") else {
-            fatalError("URL was incorrect")
-        }
+//        guard let coffeeOrdersURL =  URL(string: "https://warp-wiry-rugby.glitch.me/orders") else {
+//            fatalError("URL was incorrect")
+//        }
         
         // Resource의 [Order]의 배열은 여러개의 주문을 담을 수 있기에 배열로 처리함.
-        let resource = Resource<[Order]>(url: coffeeOrdersURL)
-        let webService = WebService()
-        webService.load(resource: resource) {[weak self] result in
+//        let resource = Resource<[Order]>(url: coffeeOrdersURL)
+        // resouce를 담을 필요가 없어졌다.
+        
+        WebService().load(resource: Order.all) {[weak self] result in
             switch result{
             case .success(let orders):
                 self?.orderListViewModel.orderViewModel = orders.map(OrderViewModel.init)

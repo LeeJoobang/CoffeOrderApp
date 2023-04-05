@@ -13,15 +13,34 @@ enum NetworkError: Error{
     case urlError
 }
 
+enum HttpMethod: String {
+    case get = "GET"
+    case post = "POST"
+}
+
 struct Resource<T: Codable>{
     let url: URL
+    var httpMethod: HttpMethod = .get
+    var body: Data? = nil
+}
+
+extension Resource {
+    init(url: URL) {
+        self.url = url
+    }
 }
 
 class WebService{
     // .resume을 해주지 않아 오류 발생
     // .해당 서버에 CoffeeType .카푸치노를 누군가 post했음. 해당 유형의 값이 나에게 없어 decoding오류 발생
     func load<T>(resource: Resource<T>, completion: @escaping (Result<T, NetworkError>) -> Void){
-        URLSession.shared.dataTask(with: resource.url) { data, response, error in
+        var request = URLRequest(url: resource.url)
+        request.httpMethod = resource.httpMethod.rawValue
+        request.httpBody = resource.body
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
             // data check
             // data, error가 nil이면 networkerror -> .domainerror
             guard let data = data, error == nil else {
