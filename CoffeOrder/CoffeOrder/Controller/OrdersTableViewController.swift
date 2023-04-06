@@ -7,15 +7,27 @@
 
 import UIKit
 
-class OrdersTableViewController: UITableViewController{
+class OrdersTableViewController: UITableViewController, AddCoffeOrderDelegate{
     
     var orderListViewModel = OrderListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         populataOrder()
-        
     }
+    
+    //delegate 처리
+    func addCoffeeOrderViewControllerDidClose(controller: UIViewController) {
+        controller.dismiss(animated: true)
+    }
+    func addCoffeeOrderViewControllerDidSave(order: Order, controller: UIViewController) {
+        controller.dismiss(animated: true)
+        
+        let orderVM = OrderViewModel(order: order)
+        self.orderListViewModel.orderViewModel.append(orderVM)
+        self.tableView.insertRows(at: [IndexPath.init(row: self.orderListViewModel.orderViewModel.count - 1, section: 0)], with: .automatic)
+    }
+    
     
     private func populataOrder(){
 //        guard let coffeeOrdersURL =  URL(string: "https://warp-wiry-rugby.glitch.me/orders") else {
@@ -35,6 +47,13 @@ class OrdersTableViewController: UITableViewController{
                 print(errors)
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navC = segue.destination as? UINavigationController, let addCoffeeOrderVC = navC.viewControllers.first as? AddOrderViewController else {
+            fatalError("Error page")
+        }
+        addCoffeeOrderVC.delegate = self
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

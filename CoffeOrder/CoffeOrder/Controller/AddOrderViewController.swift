@@ -8,7 +8,16 @@
 import Foundation
 import UIKit
 
+protocol AddCoffeOrderDelegate{
+    func addCoffeeOrderViewControllerDidSave(order: Order, controller: UIViewController)
+    func addCoffeeOrderViewControllerDidClose(controller: UIViewController)
+}
+
 class AddOrderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
+    // 현재 AddCoffeeOrderDelegate를 delegate로 선언했으나, 언제 사용할까? 처음부터 AddOrderViewController에 채택하는 것이 아니라,
+    // WebService.load가 성공하고 나서 delegate를 호출하는 것이다.
+    var delegate: AddCoffeOrderDelegate?
     
     private var vm = AddCoffeeOrderViewModel()
     @IBOutlet weak var tableview: UITableView!
@@ -53,7 +62,12 @@ class AddOrderViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddNewTableViewCell", for: indexPath)
         cell.textLabel?.text = self.vm.types[indexPath.row]
         return cell
-        
+    }
+    
+    @IBAction func closeButtonClicked(){
+        if let delegate = self.delegate{
+            delegate.addCoffeeOrderViewControllerDidClose(controller: self)
+        }
     }
     
     
@@ -77,6 +91,11 @@ class AddOrderViewController: UIViewController, UITableViewDelegate, UITableView
             switch result{
             case .success(let order):
                 print(order)
+                if let order = order, let delegate = self.delegate  {
+                    DispatchQueue.main.async {
+                        delegate.addCoffeeOrderViewControllerDidSave(order: order, controller: self)
+                    }
+                }
             case .failure(let error):
                 print(error)
             }
